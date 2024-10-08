@@ -17,10 +17,24 @@
 
 ## 安装与使用
 ~~~
-git clone https://github.com/yourusername/trajectory-repair.git
-cd trajectory-repair
-pip install -r requirements.txt
+# 创建虚拟环境
+python -m venv venv
+
+# 切换到虚拟环境
+venv\Scripts\activate
+
+# 更新虚拟环境的pip版本
+python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 在虚拟环境中安装依赖库
+python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ~~~
+## 启动接口
+~~~
+# 可以自定义端口号
+uvicorn New_analyzeAPI:app --reload --host 0.0.0.0 --port 8000
+~~~
+
 贡献
 欢迎大家提出建议和贡献代码！请查看 贡献指南 以了解如何参与。
 
