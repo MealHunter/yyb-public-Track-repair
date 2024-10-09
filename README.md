@@ -34,6 +34,21 @@ python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/s
 uvicorn New_analyzeAPI:app --reload --host 0.0.0.0 --port 8000
 ~~~
 
+#  停车超时
+## 说明
+该项目当中采用的是DBSCAN聚类算取代传统的时间统计方式的停车超时判断，采用该方法可以不在受限于设备的运动状态，可以实现设备在一定范围活动均认为设备处于静止状态。
+
+## 算法原理
+可以通过以下连接查看具体的算法原理说明
+
+https://yangyongbiao.hashnode.dev/5ygc6l2m6laf5pe26ake6k2m
+
+## 启动接口
+~~~
+# 可以自定义端口号
+uvicorn park_timeoutAPI:app --reload --host 0.0.0.0 --port 8000
+~~~
+
 贡献
 欢迎大家提出建议和贡献代码！请查看 贡献指南 以了解如何参与。
 
