@@ -6,11 +6,11 @@ import numpy as np
     clickhouse连接
 '''
 # 设置 ClickHouse 服务器连接信息
-host = '192.168.10.249'
-port = 90001
-username = 'default'
-password = 'default'
-database = 'hhd_base'
+host = ''
+port = 
+username = ''
+password = ''
+database = ''
 
 # 创建一个 ClickHouse 客户端对象
 # client = Client(host=host, port=port, user=username, password=password, database=database)
@@ -20,11 +20,11 @@ database = 'hhd_base'
 '''
 def get_db_public_portal_conn():
     connection = mysql.connector.connect(
-        host='192.168.10.250',
-        port=3309,
+        host='',
+        port=,
         user='root',
-        password='hhd@2023',
-        database='hhd-link-public-portal'
+        password='',
+        database=''
     )
 
     return connection
